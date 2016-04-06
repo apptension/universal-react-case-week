@@ -1,0 +1,18 @@
+.characterList {
+}
+
+.characterListSearch {
+  margin-bottom: 20px;
+}
+
+.characterListItem {
+  padding: 0 20px;
+}
+
+.characterListItem:nth-child(3n + 1) {
+  padding-left: 15px;
+}
+
+.characterListItem:nth-child(3n) {
+  padding-right: 15px;
+}
