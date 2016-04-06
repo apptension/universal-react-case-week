@@ -29,7 +29,7 @@ gulp.task('serve', function (callback) {
   env.set(env.DEVELOPMENT);
   runSequence(
     'clean',
-    'webpack:watch',
+    ['webpack:watch', 'serverWebpack:watch'],
     'browser-sync',
     callback
   );
