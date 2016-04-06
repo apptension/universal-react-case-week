@@ -3,15 +3,7 @@ var watch = require('gulp-watch');
 var runSequence = require('run-sequence');
 
 var tasks = require('apptension-tools/gulp')({
-  domain: 'localhost',
-  webpackDevServer: {
-    historyApiFallback: true,
-    proxy: {
-      '*': {
-        target: 'http://localhost:5000'
-      }
-    }
-  }
+  domain: 'localhost'
 });
 var env = tasks.env;
 
@@ -48,7 +40,6 @@ gulp.task('default', function (callback) {
   runSequence(
     'clean',
     'webpack',
-    'serverWebpack',
     callback
   );
 });
